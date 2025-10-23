@@ -1,16 +1,23 @@
 import "dotenv/config";
-import mongoose from "mongoose";
+import express from express
 
-const DB_URI = process.env.DB_URI;
+import "./db.js";
 
-async function run() {
-  try {
-    await mongoose.connect(DB_URI);
+const PORT = 8080;
 
-    console.log("You successfully connected to MongoDB!");
-  } finally {
-    await mongoose.disconnect();
-  }
-}
+const app = express();
 
-run().catch((error) => console.error(error));
+app.use("/", routes)
+
+app.use((req, res, next) => {
+  res.status(404).send("Not found")
+})
+
+app.use((error, req, res, next) => {
+  console.error(error)
+  res.status(500).send("Internal server error")
+})
+
+app.listen(8080, () => {
+  console.log(`Server started on port ${PORT}`)
+})

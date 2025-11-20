@@ -1,0 +1,37 @@
+{
+  "name": "traveltrucks-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pozniak17/TravelTrucks-API.git"
+  },
+  "keywords": [],
+  "author": "Yevhenii Pozniak <jekamanu@gmail.com>",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Pozniak17/TravelTrucks-API/issues"
+  },
+  "homepage": "https://github.com/Pozniak17/TravelTrucks-API#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "nodemon": "^3.1.11",
+    "pino-pretty": "^13.1.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "mongodb": "^7.0.0",
+    "mongoose": "^8.20.0",
+    "pino-http": "^11.0.0"
+  }
+}
